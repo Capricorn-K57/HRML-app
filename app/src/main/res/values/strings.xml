@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">HRML</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_login">Inloggen</string> <!-- Gebruik voor LoginFragment -->
+    <string name="menu_home">Home</string> <!-- Gebruik voor HomeFragment -->
+
+    <string name="menu_favorite">Favorieten</string>
+
+    <!--    Strings login fragment-->
+    <string name="txt_welcome">Welkom, log in om verder te gaan met de applicatie.</string>
+    <string name="email">E-mailadres</string>
+    <string name="password">Wachtwoord</string>
+    <string name="btn_login">Inloggen</string>
+
+    <!--    Strings home fragment-->
+    <string name="txt_user">Welkom!</string>
+    <string name="txt_view">Algemeen overzicht:</string>
+    <string name="txt_openings">Er zijn in totaal: %1$d vacatures</string>
+    <string name="txt_responses">En er zijn in totaal: %1$d sollicitanten</string>
+    <string name="search">Zoeken</string>
+    <string name="list_openings">Vacature</string>
+    <string name="list_response">Reacties:</string>
+
+    <!-- Strings job detail fragment-->
+    <string name="txt_title">Vacature titel</string>
+    <string name="txt_description">Beschrijving</string>
+    <string name="txt_name">Naam persoon</string>
+    <string name="int_percentage">0%</string>
+  
+<!--    Strings popup CV fragment-->
+    <string name="txt_cv_name">Naam</string>
+    <string name="txt_cv_place">Woonplaats</string>
+    <string name="int_cv_mobile">Telefoonnummer</string>
+    <string name="txt_cv_email">E-mailadres</string>"
+
+<!--    Strings Favorite fragment-->
+    <string name="no_jobs">Er zijn nog geen favoriete vacatures toegevoegd.</string>
+    <string name="no_people">Er zijn nog geen favoriete personen toegevoegd.</string>
+</resources>

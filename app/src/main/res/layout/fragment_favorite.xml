@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.favorite.FavoriteFragment">
+
+
+
+    <!-- Zoekbalk en zoekknop -->
+    <EditText
+        android:id="@+id/txt_favo_search"
+        android:layout_width="312dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_favo_search"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView voor lege weergave van favoriete banen -->
+    <TextView
+        android:id="@+id/empty_jobs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_jobs"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_favo_search"
+        android:visibility="gone" />
+
+    <!-- ListView voor favoriete banen -->
+    <ListView
+        android:id="@+id/list_favo_jobs"
+        android:layout_width="291dp"
+        android:layout_height="321dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_jobs_text"
+        tools:listitem="@layout/favorite_job" />
+
+    <!-- TextView voor lege weergave van favoriete personen -->
+    <TextView
+        android:id="@+id/empty_people_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_people"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_favo_jobs"
+        android:visibility="gone" />
+
+    <!-- ListView voor favoriete personen -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_favo_people"
+        android:layout_width="321dp"
+        android:layout_height="262dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_people_text"
+        tools:listitem="@layout/list_item_person" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

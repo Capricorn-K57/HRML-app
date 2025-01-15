@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_login">
+
+    <!-- LoginFragment als startpunt -->
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.hrml.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <!-- Actie om na inloggen naar HomeFragment te gaan -->
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <!-- HomeFragment na succesvolle login -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.hrml.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Actie van HomeFragment naar JobDetails -->
+        <action
+            android:id="@+id/action_homeFragment_to_jobDetails"
+            app:destination="@id/nav_job_details" />
+    </fragment>
+
+    <!-- JobDetails Fragment -->
+    <fragment
+        android:id="@+id/nav_job_details"
+        android:name="com.example.hrml.ui.job_details.JobDetails"
+        android:label="Functie omschrijving"
+        tools:layout="@layout/fragment_job_details">
+
+        <argument
+            android:name="jobTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="jobId"
+            app:argType="string" />
+
+        <argument
+            android:name="jobDescription"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <!-- FavoriteFragment -->
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.example.hrml.ui.favorite.FavoriteFragment"
+        android:label="@string/menu_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <argument
+            android:name="jobId"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
